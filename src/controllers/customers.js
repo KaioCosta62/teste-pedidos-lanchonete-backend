@@ -1,4 +1,5 @@
 const CustomersModel = require('../models/customers')
+const {crypto} = require('../utils/password')
 
 async function get(req, res) {
   const {id} = req.params
@@ -16,19 +17,22 @@ async function post(req, res){
     password
   } = req.body
 
+  const passwordCrypto = await crypto(password)
+
   const customer = new CustomersModel({
     name,
     age,
     email,
-    password
+    password: passwordCrypto
   })
 
   customer.save()
 
   res.send({
-    message: "cliente cadastrado com sucesso"
+    message: "success"
   })
 }
+
 module.exports = {
   get,
   post
