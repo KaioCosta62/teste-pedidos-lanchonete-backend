@@ -1,10 +1,15 @@
 const express = require('express')
 const db = require('./database/db')
+const cors = require('cors')
 const routes = require('./routes/routes')
 
 // Inicializando o express
 const app = express()
 
+// Configurando o servidor para receber request
+app.use(cors())
+
+// Configurando o servidor para aceitar requests
 // Conexão com banco de dados
 db.connect()
 
