@@ -7,5 +7,5 @@ router.post('/customers', CustomersController.post)
 router.delete('/customers/:id', CustomersController.del)
 
 
-router.get('/products/:id?', ProductsController)
+router.get('/products/:id?', ProductsController.get)
 module.exports = router
