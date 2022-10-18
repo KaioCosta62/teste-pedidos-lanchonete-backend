@@ -9,4 +9,7 @@ router.delete('/customers/:id', CustomersController.del)
 
 router.get('/products/:id?', ProductsController.get)
 router.post('/products', ProductsController.post)
+router.delete('/products/:id', ProductsController.del)
+
+
 module.exports = router
