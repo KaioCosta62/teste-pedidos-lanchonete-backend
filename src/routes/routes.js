@@ -14,5 +14,8 @@ router.delete('/products/:id', ProductsController.del)
 
 
 router.get('/requests/:id?', RequestsController.get)
+router.post('/requests', RequestsController.post)
+router.put('/requests/:id', RequestsController.put)
+
 
 module.exports = router
