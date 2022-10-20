@@ -9,14 +9,14 @@ async function get(req, res){
 
 async function post(req, res){
   const {
-    codeClient,
+    codeCustomer,
     codeProduct,
     dataCriation,
     status
   } = req.body
 
   const request = new RequestsModel({
-    codeClient,
+    codeCustomer,
     codeProduct,
     dataCriation,
     status
