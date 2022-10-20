@@ -1,13 +1,24 @@
 const RequestsModel = require('../models/requests')
+const ProductsModel = require('../models/products')
+const CustomersModel = require('../models/customers')
 
 async function get(req, res){
+  const products = await ProductsModel.find({})
+  const customers = await CustomersModel.find({})
   const {id} = req.params
   const obj = id ? {_id: id} : null
   const requests = await RequestsModel.find(obj)
-  res.send(requests)
+  res.send({
+    requests,
+    products,
+    customers
+  })
 }
 
 async function post(req, res){
+  const products = await ProductsModel.find({})
+  const customers = await CustomersModel.find({})
+
   const {
     codeCustomer,
     codeProduct,
@@ -25,7 +36,9 @@ async function post(req, res){
   request.save()
 
   res.send({
-    message: 'success'
+    message: 'success',
+    products,
+    customers
   })
 }
 
