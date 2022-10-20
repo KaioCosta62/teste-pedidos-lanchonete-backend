@@ -10,14 +10,12 @@ async function get(req, res){
 async function post(req, res){
   const {
     name,
-    price,
-    description
+    price
   } = req.body
 
   const product = await productsModel({
     name,
-    price,
-    description
+    price
   })
 
   product.save()

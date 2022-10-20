@@ -1,5 +1,5 @@
 const CustomersModel = require('../models/customers')
-const {crypto} = require('../utils/password')
+//const {crypto} = require('../utils/password')
 
 async function get(req, res) {
   const {id} = req.params
@@ -12,18 +12,19 @@ async function get(req, res) {
 async function post(req, res){
   const {
     name,
-    age,
     email,
-    password
+    phone,
+    address
   } = req.body
 
-  const passwordCrypto = await crypto(password)
+  //const passwordCrypto = await crypto(password)
 
   const customer = new CustomersModel({
     name,
-    age,
     email,
-    password: passwordCrypto
+    phone,
+    address,
+    //password: passwordCrypto
   })
 
   customer.save()
