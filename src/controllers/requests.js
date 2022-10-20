@@ -9,20 +9,16 @@ async function get(req, res){
 
 async function post(req, res){
   const {
-    name,
-    address,
-    phone,
-    product,
-    price,
+    codeClient,
+    codeProduct,
+    dataCriation,
     status
   } = req.body
 
   const request = new RequestsModel({
-    name,
-    address,
-    phone,
-    product,
-    price,
+    codeClient,
+    codeProduct,
+    dataCriation,
     status
   })
 
