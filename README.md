@@ -7,6 +7,10 @@ Por esse desafio, o desenvolvedor deverá mostrar ser capaz de desenvolver uma A
 
 - [@kaiohenrique](https://www.linkedin.com/in/kaio-henrique-costa/)
 
+## Login e senha para acessar
+
+- Login: admin
+- Senha: administrador123
 
 ## Funcionalidades
 
