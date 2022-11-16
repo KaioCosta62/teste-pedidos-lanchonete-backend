@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 function connect(){
-  mongoose.connect('mongodb://localhost:27017/lanchonete-kaiao')
+  mongoose.connect('mongodb://127.0.0.1:27017/lanchonete-kaiao')
   const db = mongoose.connection
 
   db.once('open', () => {
